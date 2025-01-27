@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Monday';
+    src: url('/fonts/Monday-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Monday', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    background-color: #000; 
+    color: #fff;
+  }
+  

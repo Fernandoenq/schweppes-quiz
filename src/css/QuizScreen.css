@@ -1,0 +1,165 @@
+
+  @font-face {
+    font-family: 'Monday';
+    src: url('/fonts/Monday-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .h1-selectedRecipe {
+    text-align: left;
+    width: 100%; 
+    padding-left: 10%;
+    font-weight: bold;
+    font-size: 2.5rem; /* O Bootstrap define display-4 como 2.5rem */
+    font-weight: 300;  /* Peso padrão do Bootstrap para displays */
+    line-height: 1.2;  /* Espaçamento entre linhas */
+    margin-top: 1.5rem;
+  }
+
+  .p-validateSelection {
+    cursor: pointer;
+    font-size: 7rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: normal;
+    font-weight: bold;
+  }
+
+  .h2-certa-errada-resposta{
+    cursor: pointer;
+    font-size: 5rem;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: normal;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .div-geral{
+    background-image: url('../../public/padrao.png');
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 9 / 16;
+    overflow: auto;
+    padding-bottom: 20%;
+    padding-top: 40%;
+    font-family: 'monday';
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .container-opcoes {
+    width: 100%;
+    padding-right: 1.5rem; /* 24px */
+    padding-left: 1.5rem;  /* 24px */
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .p-itens {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .div-results{
+    position: fixed;              /* Fixa o elemento na tela */
+    top: 0;                       /* Alinha ao topo */
+    left: 0;                      /* Alinha à esquerda */
+    width: 100%;                   /* Largura total */
+    height: 100%;                  /* Altura total */
+    display: flex;                  /* Ativa flexbox */
+    flex-direction: column;          /* Organiza os itens em coluna */
+    align-items: center;             /* Centraliza horizontalmente */
+    justify-content: center;         /* Centraliza verticalmente */
+    background-color: rgba(33, 37, 41, 0.75); /* Cor de fundo escura com opacidade */
+    text-align: center;               /* Centraliza o texto */
+    color: #fff;
+  }
+
+  .h1-results{
+    font-weight: 700;              /* fw-bold (negrito) */
+    font-size: 4.5rem;              /* display-3 (72px considerando 1rem = 16px) */
+    margin-bottom: 1.5rem;           /* mb-4 (24px) */
+    color: #ffc107;                  /* text-warning (amarelo de destaque) */
+  }
+
+  .div-igredientes{
+    text-align: left !important;
+    margin-top: 1.5rem !important;
+  }
+  .p-igredientes{
+    font-weight: bold;
+    color: white;
+    font-size: 3rem !important;  /* Aproximadamente 48px (considerando 1rem = 16px) */
+    font-weight: 300 !important; /* Fonte mais leve */
+    line-height: 1.2 !important; /* Espaçamento entre linhas */
+  }
+  
+  /* Larguras fixas baseadas nos breakpoints do Bootstrap */
+  @media (min-width: 576px) {
+    .container-opcoes {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container-opcoes {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container-opcoes {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container-opcoes {
+      max-width: 1140px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .container-opcoes {
+      max-width: 1320px;
+    }
+  }
+
+  @media (min-width: 2000px) {
+    .container-opcoes {
+        max-width: 2020px;
+    }
+    .h1-selectedRecipe {
+        font-size: 5rem;
+    }
+    .p-validateSelection {
+        font-size: 15rem;
+        bottom: 7%;
+    }
+    .h2-certa-errada-resposta {
+        font-size: 10rem;
+    }
+    .h1-results{
+        font-size: 8rem;              /* display-3 (72px considerando 1rem = 16px) */
+    }
+    .p-itens {
+        font-size: 2rem;
+    }
+    .p-igredientes{
+        font-size: 5rem !important;  /* Aproximadamente 48px (considerando 1rem = 16px) */
+        line-height: 1.5 !important; /* Espaçamento entre linhas */
+      }
+  }
+  

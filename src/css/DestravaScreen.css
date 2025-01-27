@@ -1,0 +1,56 @@
+/* Estilos para resolução 1080x1920 */
+.low-res {
+    background-image: url('../../public/restscreen1.png');
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 9 / 16;
+    padding-top: 100%;
+    padding-bottom: 5%;
+    cursor: pointer;
+    font-family: 'Monday';
+  }
+  
+  .low-res h3 {
+    font-size: 3.5rem;
+  }
+  
+  .low-res h2 {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .low-res .drink-image {
+    max-width: 50%;
+    height: auto;
+    margin-top: 3rem;
+  }
+  
+  /* Estilos para resolução 2160x3840 */
+  .high-res {
+    background-image: url('../../public/restscreen1.png');
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 9 / 16;
+    padding-top: 80%;
+    padding-bottom: 3%;
+    cursor: pointer;
+    font-family: 'Monday';
+  }
+  
+  .high-res h3 {
+    font-size: 7rem;
+  }
+  
+  .high-res h2 {
+    font-size: 8rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .high-res .drink-image {
+    max-width: 35%;
+    height: auto;
+    margin-top: 5rem;
+  }
+  
