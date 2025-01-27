@@ -184,7 +184,7 @@ const [correctAnswers, setCorrectAnswers] = useState<string[]>(recipes[selectedR
 {showResultImage && (
   <div
     className="div-results"
-    onClick={() => setShowResultImage(false)}
+    //onClick={() => setShowResultImage(false)}
   >
     <h1 className="h1-results">
       {validated ? 'RESPOSTA CORRETA' : 'RESPOSTA CORRETA SERIA'}
