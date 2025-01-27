@@ -7,14 +7,14 @@
   }
   
   .h1-selectedRecipe {
-    text-align: left;
+    text-align: center;
     width: 100%; 
-    padding-left: 10%;
     font-weight: bold;
-    font-size: 2.5rem; /* O Bootstrap define display-4 como 2.5rem */
+    font-size: 4rem; /* O Bootstrap define display-4 como 2.5rem */
     font-weight: 300;  /* Peso padrão do Bootstrap para displays */
     line-height: 1.2;  /* Espaçamento entre linhas */
     margin-top: 1.5rem;
+    padding-bottom: 1%;
   }
 
   .p-validateSelection {
@@ -47,7 +47,7 @@
     aspect-ratio: 9 / 16;
     overflow: auto;
     padding-bottom: 20%;
-    padding-top: 40%;
+    padding-top: 20%;
     font-family: 'monday';
     align-items: center;
     justify-content: center;
@@ -142,7 +142,7 @@
         max-width: 2020px;
     }
     .h1-selectedRecipe {
-        font-size: 5rem;
+        font-size: 7rem;
     }
     .p-validateSelection {
         font-size: 15rem;

@@ -121,20 +121,19 @@ const [correctAnswers, setCorrectAnswers] = useState<string[]>(recipes[selectedR
     
   };
 
-  // Dentro do componente QuizScreen
+ 
 
   const navigate = useNavigate();
   useEffect(() => {
     if (showResultImage) {
-      // Aguarda 5 segundos e redireciona para a página DestravaScreen
       
       const timeout = setTimeout(() => {
-        localStorage.setItem('unlocked', JSON.stringify(validated)); // Salva no cache
-        localStorage.setItem('selectedRecipe', JSON.stringify(selectedRecipe)); // Salva no cache
+        localStorage.setItem('unlocked', JSON.stringify(validated));
+        localStorage.setItem('selectedRecipe', JSON.stringify(selectedRecipe));
         navigate('/destrava', { state: { unlocked: validated } });
       }, 5000);
       
-      return () => clearTimeout(timeout); // Limpa o timeout se o componente for desmontado
+      return () => clearTimeout(timeout); 
     }
   }, [showResultImage, navigate]);
 
