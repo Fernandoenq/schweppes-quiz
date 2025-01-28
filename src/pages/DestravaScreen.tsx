@@ -55,28 +55,24 @@ const DestravaScreen: React.FC = () => {
 
   return (
     <div
-      className={`vh-100 vw-100 d-flex flex-column align-items-center justify-content-center text-center bg-dark ${
-        isHighResolution ? 'high-res' : 'low-res'
-      }`}
+      className="div-main"
       onClick={handleScreenClick} // Detecta cliques na tela
     >
-      <div className="text-center text-white">
-        <h3 className="text-white fw-bold">
+        <h3 className="h3-intern">
           {unlocked ? 'VOCÊ DESTRAVOU' : 'VOCÊ NÃO DESTRAVOU'}
         </h3>
-        <h2 className="text-warning fw-bold">O DRINK PARA O <br /> HAPPY HOUR</h2>
+        <h2 className="h2-intern">O DRINK PARA O <br /> HAPPY HOUR</h2>
 
         {selectedRecipe && recipeImages[selectedRecipe] ? (
           <img
             src={recipeImages[selectedRecipe]}
             alt={selectedRecipe}
-            className="img-fluid drink-image"
+            className="drink-image"
           />
         ) : (
           <h3 className="text-danger fw-bold">Imagem não encontrada</h3>
         )}
       </div>
-    </div>
   );
 };
 

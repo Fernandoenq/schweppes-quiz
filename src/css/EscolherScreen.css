@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Monday';
+    src: url('/fonts/Monday-Medium.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+.escolher-container {
+    font-family: 'monday';
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: #343a40;
+    position: relative;
+    padding-bottom: 45%;
+    aspect-ratio: 9/16;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../../public/padrao.png');
+}
+
+.escolher-title {
+    font-size: 6rem;
+    color: #ffc107;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 30%; /* 2/3 da altura da página */
+    font-weight: 300;
+}
+
+.escolher-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: absolute;
+    top: 57%; /* 2/3 da altura da página */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.escolher-item {
+    text-align: center;
+    font-weight: 300;
+}
+
+.escolher-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.escolher-item.selected {
+    background-color: rgb(226, 226, 226); /* Fundo branco para a imagem selecionada */
+    border-radius: 10px; /* Opcional: mantém o mesmo arredondamento das imagens */
+}
+
+
+.escolher-text {
+    font-size: 1.5rem;
+    color: #ffc107;
+    margin-top: 1rem;
+}
+
+.btn-confirmar {
+    font-size: 5rem; /* Tamanho do texto */
+    font-weight: 300;
+    border-radius: 0.375rem; /* Borda arredondada */
+    padding: 2rem 6rem; /* Aumentado o espaçamento interno para mais distância do texto à borda */
+    box-shadow: 0px 4px 6px rgba(31, 31, 31, 0.1); /* Sombra padrão Bootstrap */
+    background-color: #000914; /* Cor de fundo do botão */
+    color: #ffc107; /* Cor do texto */
+    border: 4px solid #ffc107; /* Borda visível */
+    transition: all 0.2s ease-in-out;
+    position: absolute; /* Posicionamento absoluto para ajustar verticalmente */
+    top: 83%; /* 2/3 da altura da página */
+    
+}
+
+/* Efeito ao clicar */
+.btn-confirmar:active {
+    background-color: #000000;
+    color: #d4a307;
+    border-color: #d4a307;
+    box-shadow: 0px 2px 4px rgba(31, 31, 31, 0.5);
+}
+
+.btn-confirmar:disabled {
+    color: #221a01;
+}
+
+
+@media (min-width: 2000px) {
+    .escolher-img {
+        width: 600px;
+    }
+
+    .escolher-title {
+        font-size: 10rem;
+    }
+    .btn-confirmar{
+        font-size: 12rem;
+    }
+    .escolher-text{
+        font-size: 4rem;
+    }
+}

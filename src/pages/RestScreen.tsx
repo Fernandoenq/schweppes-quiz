@@ -24,6 +24,7 @@ const RestScreen: React.FC = () => {
       }}
       onClick={handleScreenClick} // Detecta cliques na tela
       >
+        
     </div>
   );
 };

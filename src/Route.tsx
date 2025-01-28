@@ -3,6 +3,7 @@ import RestScreen from './pages/RestScreen';
 import JogarScreen from './pages/JogarScreen';
 import QuizScreen from './pages/QuizScreen';
 import DestravaScreen from './pages/DestravaScreen';
+import EscolherScreen from './pages/EscolherScreen';
 
 const App: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<RestScreen />} />
         <Route path="/jogar" element={<JogarScreen />} />
+        <Route path="/escolher" element={<EscolherScreen />} />
         <Route path="/quiz" element={<QuizScreen />} />
         <Route path="/destrava" element={<DestravaScreen />} />
       </Routes>
