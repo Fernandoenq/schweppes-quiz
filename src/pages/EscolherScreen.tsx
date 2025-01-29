@@ -41,7 +41,7 @@ const EscolherScreen: React.FC = () => {
         onClick={handleConfirm} 
         disabled={!selectedDrink} // Desativa o botão se nenhuma receita for selecionada
       >
-        Confirmar
+        CONFIRMAR
       </button>
     </div>
   );

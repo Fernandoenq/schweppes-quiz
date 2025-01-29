@@ -5,7 +5,6 @@
   background-position: center;
   aspect-ratio: 9 / 16;
   padding-top: 100%;
-  padding-bottom: 5%;
   cursor: pointer;
   font-family: 'Monday';
   align-items: center;
@@ -30,7 +29,6 @@
 .drink-image {
   max-width: 600px;
   height: auto;
-  margin-top: 3rem;
 }
 
 

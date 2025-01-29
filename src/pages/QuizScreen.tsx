@@ -55,11 +55,34 @@ const QuizScreen: React.FC = () => {
   const shuffleArray = (array: any[]) => array.sort(() => Math.random() - 0.5);
 
   const filteredItems = React.useMemo(() => {
-    const selected = items
-      .filter(item => correctAnswers.includes(item.label))
-      .concat(items.filter(item => !correctAnswers.includes(item.label)).slice(0, 12 - correctAnswers.length));
+    // Base para os itens que estão corretos
+    let selected = items.filter((item) => correctAnswers.includes(item.label));
+  
+    // Lista de itens a serem excluídos
+    const excludedLabels: string[] = []; 
+  
+    // Regras específicas para cada receita
+    if (selectedRecipe === 'CAMPARI TONIC') {
+      excludedLabels.push('100ML SCHWEPPES TONICA');
+    } else if (selectedRecipe === 'GIN TÔNICA') {
+      excludedLabels.push('150ML SCHWEPPES TONICA');
+    } else if (['SKYY MOSCOW MULLE', 'JB CITRUS', 'MONSTER GIN', 'APEROL'].includes(selectedRecipe)) {
+      // Excluir aleatoriamente um dos dois itens
+      const randomChoice = Math.random() > 0.5 ? '150ML SCHWEPPES TONICA' : '100ML SCHWEPPES TONICA';
+      excludedLabels.push(randomChoice);
+    }
+  
+    // Filtra os itens corretos e exclui os itens na lista de exclusão
+    const additionalItems = items.filter(
+      (item) =>
+        !correctAnswers.includes(item.label) && !excludedLabels.includes(item.label)
+    );
+  
+    // Mistura os itens corretos com os adicionais para completar 12
+    selected = selected.concat(additionalItems.slice(0, 12 - selected.length));
     return shuffleArray(selected);
-  }, [correctAnswers]);
+  }, [correctAnswers, selectedRecipe]);
+  
 
   const handleImageClick = (label: string) => {
     setSelectedItems((prev) => {
