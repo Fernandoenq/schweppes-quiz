@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <Route path="/quiz" element={<QuizScreen />} />
         <Route path="/destrava" element={<DestravaScreen />} />
       </Routes>
-    </Router>
+    </Router> 
   );
 };
 
